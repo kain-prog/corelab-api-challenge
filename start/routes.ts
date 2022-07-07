@@ -18,6 +18,8 @@
 |
 */
 
-import Route from '@ioc:Adonis/Core/Route'
+import Route from '@ioc:Adonis/Core/Route';
 
-Route.get('/vehicles', 'VehiclesController.index');
+Route.group(() => {
+	Route.get('/vehicles', 'VehiclesController.index');
+}).prefix('/api');
