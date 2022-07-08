@@ -22,6 +22,9 @@
             "error",
             "tab"
         ],
+        "no-empty-pattern":[
+            0
+        ],
         "linebreak-style": [
             0
         ],
