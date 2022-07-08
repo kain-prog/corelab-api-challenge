@@ -12,7 +12,12 @@ export default class VehiclesController {
 			return vehicle;
 
 		} catch (err) {
-			console.log(err);
+			
+			return {
+				code: 404,
+				message: err.message
+
+			};
 		}
 	}
 
@@ -24,7 +29,12 @@ export default class VehiclesController {
 			return vehicle;
 
 		} catch (err) {
-			console.log(err);
+			
+			return {
+				code: 404,
+				message: err.message
+
+			};
 		}
 	}
 
@@ -38,7 +48,12 @@ export default class VehiclesController {
 			return vehicle;
 
 		} catch (err) {
-			console.log(err);
+			
+			return {
+				code: 404,
+				message: err.message
+
+			};
 		}
 	}
 
@@ -57,7 +72,12 @@ export default class VehiclesController {
 
 
 		} catch (err) {
-			console.log(err);
+			
+			return {
+				code: 404,
+				message: err.message
+
+			};
 		}
 	}
 
@@ -69,7 +89,12 @@ export default class VehiclesController {
 			await vehicle.delete();
 			
 		} catch (err) {
-			console.log(err);
+			
+			return {
+				code: 404,
+				message: err.message
+
+			};
 		}
 	}
 

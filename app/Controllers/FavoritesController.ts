@@ -13,7 +13,12 @@ export default class FavoritesController {
 			return favorite;
 
 		} catch (err) {
-			console.log(err);
+
+			return {
+				code: 404,
+				message: err.message
+
+			};
 		}
 	}
   
@@ -26,7 +31,12 @@ export default class FavoritesController {
 
 
 		} catch (err) {
-			console.log(err);
+      
+			return {
+				code: 404,
+				message: err.message
+
+			};
 		}
 	}
 
@@ -40,7 +50,12 @@ export default class FavoritesController {
 			return favorite;
 
 		} catch (err) {
-			console.log(err);
+      
+			return {
+				code: 404,
+				message: err.message
+
+			};
 		}
 	}
 
@@ -58,9 +73,15 @@ export default class FavoritesController {
 			return favorite;
       
 		} catch (err) {
-			console.log(err);
+      
+			return {
+				code: 404,
+				message: err.message
+
+			};
 		}
 	}
+	
 
 	public async destroy({ params }: HttpContextContract) {
 		try {
@@ -70,7 +91,12 @@ export default class FavoritesController {
 			await favorite.delete();
 
 		} catch (err) {
-			console.log(err);
+			
+			return {
+				code: 404,
+				message: err.message
+
+			};
 		}
 	}
 }
