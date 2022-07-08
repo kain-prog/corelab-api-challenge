@@ -1,5 +1,5 @@
 export interface IVehicle {
-    id: number;
+    id?: number;
     name: string;
     brand: string;
     description: string;
