@@ -6,4 +6,6 @@ Route.group(() => {
 
 	Route.resource('/favorites', 'FavoritesController').apiOnly();
 
+	Route.get('/adverts/:id','VehiclesController.getByUserId');
+
 }).prefix('/api');

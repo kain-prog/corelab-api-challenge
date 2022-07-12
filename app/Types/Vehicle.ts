@@ -7,5 +7,6 @@ export interface IVehicle {
     year: number;
     color: string;
     price: number;
-    user_id: number;
+    km: number;
+    userId: string;
 }

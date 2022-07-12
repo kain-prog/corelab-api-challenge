@@ -10,7 +10,7 @@ export default class Favorite extends BaseModel {
   public vehicleId: number;
 
   @column()
-  public userId: number;
+  public userId: string;
 
   @column.dateTime({ autoCreate: true })
   public createdAt: DateTime;

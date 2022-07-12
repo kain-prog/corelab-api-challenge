@@ -9,7 +9,7 @@ export default class FavoritesController {
 		try {
       
 			const favorite: IFavorite[] = await Favorite.query().preload('vehicle');
-
+			
 			return favorite;
 
 		} catch (err) {
@@ -24,8 +24,8 @@ export default class FavoritesController {
   
 	public async show({ params }: HttpContextContract) {
 		try {
-      
-			const favorite: IFavorite = await Favorite.findOrFail(params.id);
+
+			const favorite: IFavorite[] = await Favorite.query().preload('vehicle').where('userId', params.id);
 
 			return favorite;
 

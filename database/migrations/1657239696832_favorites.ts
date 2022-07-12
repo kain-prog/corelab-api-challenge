@@ -12,7 +12,7 @@ export default class extends BaseSchema {
 				.inTable('vehicles')
 				.onUpdate('CASCADE')
 				.onDelete('CASCADE');
-			table.integer('user_id').unsigned();
+			table.string('user_id').unsigned();
 
 			/**
        * Uses timestamptz for PostgreSQL and DATETIME2 for MSSQL

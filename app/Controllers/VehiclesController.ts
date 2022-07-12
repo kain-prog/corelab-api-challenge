@@ -98,4 +98,20 @@ export default class VehiclesController {
 		}
 	}
 
+	public async getByUserId({params}: HttpContextContract) {
+		try {
+			
+			const vehicle: IVehicle[] = await Vehicle.query().where('userId', params.id);
+			
+			return vehicle;
+
+
+		} catch (err) {
+			return {
+				code: 404,
+				message: err.message
+			};
+		}
+	}
+
 }

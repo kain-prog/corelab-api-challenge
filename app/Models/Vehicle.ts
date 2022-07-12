@@ -25,10 +25,13 @@ export default class Vehicle extends BaseModel {
   public color: string;
 
   @column()
+  public km: number;
+
+  @column()
   public price: number;
 
   @column()
-  public user_id: number;
+  public userId: string;
 
   @column.dateTime({ autoCreate: true })
   public createdAt: DateTime;
